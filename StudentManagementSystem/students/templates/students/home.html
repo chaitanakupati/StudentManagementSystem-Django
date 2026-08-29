@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet"
+          href="{% static 'students/style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <a href="{% url 'home' %}">
+            Home
+        </a>
+
+        {% if user.is_authenticated %}
+
+            <a href="{% url 'dashboard' %}">
+                Dashboard
+            </a>
+
+            <a href="{% url 'student_list' %}">
+                Student List
+            </a>
+
+            <a href="{% url 'add_student' %}">
+                Add Student
+            </a>
+
+            <a href="{% url 'logout' %}">
+                Logout
+            </a>
+
+        {% else %}
+
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+
+        {% endif %}
+
+    </nav>
+
+
+    <!-- Home Section -->
+
+    <div class="home-container">
+
+        <div class="home-content">
+
+            <h1>
+                Welcome to Student Management System
+            </h1>
+
+            <p>
+                Manage student information easily and efficiently.
+            </p>
+
+
+            <!-- Buttons -->
+
+            <div class="home-buttons">
+
+                {% if user.is_authenticated %}
+
+                    <a href="{% url 'student_list' %}"
+                       class="home-button">
+                        View Students
+                    </a>
+
+                    <a href="{% url 'add_student' %}"
+                       class="home-button">
+                        + Add Student
+                    </a>
+
+                {% else %}
+
+                    <a href="{% url 'login' %}"
+                       class="home-button">
+                        Login
+                    </a>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
