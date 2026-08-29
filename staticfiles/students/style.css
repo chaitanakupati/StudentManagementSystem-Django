@@ -1,7 +1,5 @@
 /* =========================================================
    STUDENT MANAGEMENT SYSTEM
-   MODERN DARK BLUE UI
-   Main Color: #212C43
 ========================================================= */
 
 
@@ -988,6 +986,33 @@ button:hover {
     transform: translateY(-2px);
 }
 
+/* edit1-button */
+.edit1-button{
+    
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    margin: 8px;
+
+    background: #4a536b;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+
+}
+
+.edit1-button:hover {
+
+    background: #626c86;
+
+    transform: translateY(-2px);
+}
 
 /* =========================================================
    STUDENT DETAIL PAGE

@@ -34,7 +34,6 @@ def login_view(request):
         username = request.POST.get("username", "").strip()
         password = request.POST.get("password", "")
 
-        # Check username and password
         user = authenticate(
             request,
             username=username,
@@ -45,12 +44,7 @@ def login_view(request):
 
             login(request, user)
 
-            messages.success(
-                request,
-                "Login successful!"
-            )
-
-            return redirect("home")
+            return redirect("/")
 
         else:
 
@@ -351,7 +345,7 @@ def add_student(request):
                 name=name,
                 email=email,
                 phone=phone,
-                date_of_birth=date_of_birth,
+                date_of_birth=dob,
                 gender=gender,
                 address=address,
                 course=course,
@@ -539,7 +533,7 @@ def edit_student(request, id):
         student.name = name
         student.email = email
         student.phone = phone
-        student.date_of_birth = date_of_birth
+        student.date_of_birth = dob
         student.gender = gender
         student.address = address
         student.course = course

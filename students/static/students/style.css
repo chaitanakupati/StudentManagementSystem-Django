@@ -1,11 +1,4 @@
 /* =========================================================
-   STUDENT MANAGEMENT SYSTEM
-   MODERN DARK BLUE UI
-   Main Color: #212C43
-========================================================= */
-
-
-/* =========================================================
    GENERAL
 ========================================================= */
 
@@ -23,8 +16,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     background:
-        radial-gradient(circle at top right, rgba(110, 72, 220, 0.15), transparent 35%),
-        linear-gradient(135deg, #212C43 0%, #171E35 100%);
+        radial-gradient(
+            circle at top right,
+            rgba(110, 72, 220, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #212C43 0%,
+            #171E35 100%
+        );
 
     color: #ffffff;
     min-height: 100vh;
@@ -86,7 +87,6 @@ nav a:hover {
 .student-container,
 .form-container,
 .delete-container {
-
     width: 92%;
 
     max-width: 1100px;
@@ -117,8 +117,6 @@ nav a:hover {
     font-size: 15px;
 
     font-weight: bold;
-
-    box-sizing: border-box;
 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
@@ -151,7 +149,6 @@ nav a:hover {
 ========================================================= */
 
 .home-container {
-
     min-height: calc(100vh - 80px);
 
     display: flex;
@@ -166,7 +163,6 @@ nav a:hover {
 }
 
 .home-content {
-
     max-width: 750px;
 
     padding: 45px;
@@ -183,7 +179,6 @@ nav a:hover {
 }
 
 .home-content h1 {
-
     font-size: 42px;
 
     margin-bottom: 15px;
@@ -192,7 +187,6 @@ nav a:hover {
 }
 
 .home-content p {
-
     font-size: 18px;
 
     color: #b9c0dc;
@@ -201,7 +195,6 @@ nav a:hover {
 }
 
 .home-buttons {
-
     display: flex;
 
     justify-content: center;
@@ -212,7 +205,6 @@ nav a:hover {
 }
 
 .home-button {
-
     display: inline-block;
 
     padding: 13px 25px;
@@ -221,7 +213,11 @@ nav a:hover {
 
     border-radius: 9px;
 
-    background: linear-gradient(135deg, #7c4dff, #5e35b1);
+    background: linear-gradient(
+        135deg,
+        #7c4dff,
+        #5e35b1
+    );
 
     color: white;
 
@@ -233,7 +229,6 @@ nav a:hover {
 }
 
 .home-button:hover {
-
     transform: translateY(-2px);
 
     box-shadow: 0 12px 25px rgba(124, 77, 255, 0.4);
@@ -245,7 +240,6 @@ nav a:hover {
 ========================================================= */
 
 .student-container h1 {
-
     color: #ffffff;
 
     font-size: 32px;
@@ -254,14 +248,12 @@ nav a:hover {
 }
 
 .student-container h2 {
-
     color: #bfc6e5;
 
     margin-bottom: 25px;
 }
 
 .student-header {
-
     display: flex;
 
     justify-content: center;
@@ -279,7 +271,6 @@ nav a:hover {
 ========================================================= */
 
 .search-form {
-
     display: flex;
 
     justify-content: center;
@@ -290,7 +281,6 @@ nav a:hover {
 }
 
 .search-form input {
-
     width: 400px;
 
     padding: 13px 15px;
@@ -311,19 +301,16 @@ nav a:hover {
 }
 
 .search-form input::placeholder {
-
     color: #8991af;
 }
 
 .search-form input:focus {
-
     border-color: #7c4dff;
 
     box-shadow: 0 0 0 2px rgba(124, 77, 255, 0.15);
 }
 
 .search-form button {
-
     margin: 0;
 
     border-radius: 0 8px 8px 0;
@@ -335,7 +322,6 @@ nav a:hover {
 ========================================================= */
 
 .sort-form {
-
     display: flex;
 
     justify-content: center;
@@ -346,7 +332,6 @@ nav a:hover {
 }
 
 .sort-form form {
-
     display: flex;
 
     justify-content: center;
@@ -357,14 +342,12 @@ nav a:hover {
 }
 
 .sort-form label {
-
     font-weight: bold;
 
     color: #c9cee3;
 }
 
 .sort-form select {
-
     padding: 10px 15px;
 
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -388,7 +371,6 @@ nav a:hover {
 ========================================================= */
 
 .table-wrapper {
-
     width: 100%;
 
     display: flex;
@@ -405,7 +387,6 @@ nav a:hover {
 }
 
 .student-container table {
-
     width: 100%;
 
     max-width: 1100px;
@@ -415,13 +396,10 @@ nav a:hover {
     border-collapse: collapse;
 
     background: rgba(255, 255, 255, 0.04);
-
-    overflow: hidden;
 }
 
 .student-container th,
 .student-container td {
-
     text-align: center;
 
     padding: 15px;
@@ -430,7 +408,6 @@ nav a:hover {
 }
 
 .student-container th {
-
     background: #171e35;
 
     color: #ffffff;
@@ -439,14 +416,12 @@ nav a:hover {
 }
 
 .student-container td {
-
     color: #dfe3f4;
 
     background: rgba(255, 255, 255, 0.025);
 }
 
 .student-container tr:hover td {
-
     background: rgba(124, 77, 255, 0.09);
 }
 
@@ -456,12 +431,10 @@ nav a:hover {
 ========================================================= */
 
 .actions {
-
     text-align: center !important;
 }
 
 .actions a {
-
     display: inline-block;
 
     padding: 7px 11px;
@@ -476,7 +449,6 @@ nav a:hover {
 }
 
 .actions a:hover {
-
     transform: translateY(-2px);
 }
 
@@ -484,7 +456,6 @@ nav a:hover {
 /* VIEW */
 
 .actions a:first-child {
-
     color: #62c8ff;
 
     font-weight: bold;
@@ -494,14 +465,16 @@ nav a:hover {
 /* EDIT */
 
 .edit-button {
-
-    background: linear-gradient(135deg, #6c4cff, #5133b6);
+    background: linear-gradient(
+        135deg,
+        #6c4cff,
+        #5133b6
+    );
 
     color: white !important;
 }
 
 .edit-button:hover {
-
     box-shadow: 0 5px 15px rgba(108, 76, 255, 0.35);
 }
 
@@ -509,14 +482,12 @@ nav a:hover {
 /* DELETE */
 
 .delete-button {
-
     background: #dc3545;
 
     color: white !important;
 }
 
 .delete-button:hover {
-
     background: #b52a38;
 }
 
@@ -526,12 +497,15 @@ nav a:hover {
 ========================================================= */
 
 .add-button {
-
     display: inline-block;
 
     padding: 11px 20px;
 
-    background: linear-gradient(135deg, #7c4dff, #5e35b1);
+    background: linear-gradient(
+        135deg,
+        #7c4dff,
+        #5e35b1
+    );
 
     color: white;
 
@@ -547,7 +521,6 @@ nav a:hover {
 }
 
 .add-button:hover {
-
     transform: translateY(-2px);
 
     box-shadow: 0 10px 25px rgba(124, 77, 255, 0.4);
@@ -559,7 +532,6 @@ nav a:hover {
 ========================================================= */
 
 .form-container {
-
     max-width: 650px;
 
     background: rgba(255, 255, 255, 0.045);
@@ -578,21 +550,18 @@ nav a:hover {
 }
 
 .form-container h1 {
-
     color: white;
 
     margin-bottom: 8px;
 }
 
 .form-container h2 {
-
     color: #aeb6d4;
 
     margin-bottom: 25px;
 }
 
 .form-container form {
-
     width: 100%;
 
     max-width: 520px;
@@ -601,7 +570,6 @@ nav a:hover {
 }
 
 .form-group {
-
     width: 100%;
 
     margin-bottom: 18px;
@@ -610,7 +578,6 @@ nav a:hover {
 }
 
 .form-group label {
-
     display: block;
 
     margin-bottom: 7px;
@@ -625,7 +592,6 @@ nav a:hover {
 .form-group input,
 .form-group select,
 .form-group textarea {
-
     width: 100%;
 
     padding: 12px 13px;
@@ -649,28 +615,24 @@ nav a:hover {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-
     color: #7e87a5;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-
     border-color: #7c4dff;
 
     box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.12);
 }
 
 .form-group select option {
-
     background: #212C43;
 
     color: white;
 }
 
 .form-container button {
-
     display: block;
 
     margin: 22px auto 10px;
@@ -682,7 +644,6 @@ nav a:hover {
 ========================================================= */
 
 .delete-container {
-
     max-width: 500px;
 
     background: rgba(255, 255, 255, 0.045);
@@ -697,13 +658,11 @@ nav a:hover {
 }
 
 .delete-container h1 {
-
     color: #ff6b7a;
 }
 
 .delete-container h2,
 .delete-container p {
-
     color: #c7cde2;
 
     text-align: center;
@@ -715,7 +674,6 @@ nav a:hover {
 ========================================================= */
 
 button {
-
     padding: 11px 22px;
 
     margin: 8px;
@@ -724,7 +682,11 @@ button {
 
     border-radius: 8px;
 
-    background: linear-gradient(135deg, #7c4dff, #5e35b1);
+    background: linear-gradient(
+        135deg,
+        #7c4dff,
+        #5e35b1
+    );
 
     color: white;
 
@@ -740,7 +702,6 @@ button {
 }
 
 button:hover {
-
     transform: translateY(-2px);
 
     box-shadow: 0 10px 22px rgba(124, 77, 255, 0.35);
@@ -752,14 +713,12 @@ button:hover {
 ========================================================= */
 
 .email-link {
-
     color: #65c7ff;
 
     text-decoration: none;
 }
 
 .email-link:hover {
-
     text-decoration: underline;
 
     font-weight: bold;
@@ -771,7 +730,6 @@ button:hover {
 ========================================================= */
 
 .dashboard-cards {
-
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
@@ -782,7 +740,6 @@ button:hover {
 }
 
 .dashboard-card {
-
     background:
         linear-gradient(
             135deg,
@@ -804,21 +761,18 @@ button:hover {
 }
 
 .dashboard-card:hover {
-
     transform: translateY(-4px);
 
     border-color: rgba(124, 77, 255, 0.35);
 }
 
 .dashboard-card h3 {
-
     margin-bottom: 15px;
 
     color: #ffffff;
 }
 
 .dashboard-card p {
-
     font-size: 32px;
 
     font-weight: bold;
@@ -829,14 +783,12 @@ button:hover {
 }
 
 .dashboard-card span {
-
     font-size: 14px;
 
     color: #aeb6d4;
 }
 
 .course-title {
-
     margin-top: 35px;
 
     margin-bottom: 20px;
@@ -845,7 +797,6 @@ button:hover {
 }
 
 .no-course {
-
     background: rgba(255, 255, 255, 0.05);
 
     padding: 25px;
@@ -860,14 +811,12 @@ button:hover {
 }
 
 .dashboard-actions {
-
     text-align: center;
 
     margin-top: 35px;
 }
 
 .dashboard-actions a {
-
     display: inline-block;
 
     padding: 12px 20px;
@@ -878,7 +827,11 @@ button:hover {
 
     border-radius: 8px;
 
-    background: linear-gradient(135deg, #7c4dff, #5e35b1);
+    background: linear-gradient(
+        135deg,
+        #7c4dff,
+        #5e35b1
+    );
 
     color: white;
 
@@ -886,7 +839,6 @@ button:hover {
 }
 
 .dashboard-actions a:hover {
-
     transform: translateY(-2px);
 }
 
@@ -896,7 +848,6 @@ button:hover {
 ========================================================= */
 
 .pagination {
-
     display: flex;
 
     justify-content: center;
@@ -909,7 +860,6 @@ button:hover {
 }
 
 .pagination a {
-
     display: inline-block;
 
     padding: 10px 16px;
@@ -926,12 +876,10 @@ button:hover {
 }
 
 .pagination a:hover {
-
     background: #7c4dff;
 }
 
 .pagination span {
-
     display: inline-block;
 
     padding: 10px 16px;
@@ -947,7 +895,6 @@ button:hover {
 ========================================================= */
 
 .no-students {
-
     padding: 25px !important;
 
     font-weight: bold;
@@ -963,7 +910,6 @@ button:hover {
 ========================================================= */
 
 .cancel-button {
-
     display: inline-block;
 
     padding: 11px 22px;
@@ -982,7 +928,35 @@ button:hover {
 }
 
 .cancel-button:hover {
+    background: #626c86;
 
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   EDIT 1 BUTTON
+========================================================= */
+
+.edit1-button {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    margin: 8px;
+
+    background: #4a536b;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+}
+
+.edit1-button:hover {
     background: #626c86;
 
     transform: translateY(-2px);
@@ -994,7 +968,6 @@ button:hover {
 ========================================================= */
 
 .detail-container {
-
     width: 85%;
 
     max-width: 750px;
@@ -1013,7 +986,6 @@ button:hover {
 }
 
 .detail-container h1 {
-
     text-align: center;
 
     margin-bottom: 25px;
@@ -1022,12 +994,10 @@ button:hover {
 }
 
 .student-details {
-
     margin-top: 20px;
 }
 
 .student-details p {
-
     padding: 13px;
 
     margin: 8px 0;
@@ -1040,7 +1010,6 @@ button:hover {
 }
 
 .student-details strong {
-
     display: inline-block;
 
     width: 160px;
@@ -1049,14 +1018,12 @@ button:hover {
 }
 
 .detail-buttons {
-
     text-align: center;
 
     margin-top: 25px;
 }
 
 .back-button {
-
     display: inline-block;
 
     padding: 10px 20px;
@@ -1075,7 +1042,6 @@ button:hover {
 }
 
 .back-button:hover {
-
     background: #626c86;
 
     transform: translateY(-2px);
@@ -1087,7 +1053,6 @@ button:hover {
 ========================================================= */
 
 body.login-page {
-
     margin: 0;
 
     padding: 20px;
@@ -1122,7 +1087,6 @@ body.login-page {
 ========================================================= */
 
 body.login-page .login-box {
-
     width: 380px !important;
 
     max-width: 94% !important;
@@ -1156,7 +1120,6 @@ body.login-page .login-box {
 ========================================================= */
 
 body.login-page .login-box h1 {
-
     text-align: center;
 
     margin: 0 0 8px 0;
@@ -1169,7 +1132,6 @@ body.login-page .login-box h1 {
 }
 
 body.login-page .login-box h2 {
-
     text-align: center;
 
     margin: 0 0 22px 0;
@@ -1187,7 +1149,6 @@ body.login-page .login-box h2 {
 ========================================================= */
 
 body.login-page .login-box form {
-
     width: 100%;
 
     margin: 0;
@@ -1199,7 +1160,6 @@ body.login-page .login-box form {
 ========================================================= */
 
 body.login-page .login-form-group {
-
     width: 100% !important;
 
     margin-bottom: 16px;
@@ -1213,7 +1173,6 @@ body.login-page .login-form-group {
 ========================================================= */
 
 body.login-page .login-form-group label {
-
     display: block !important;
 
     width: 100% !important;
@@ -1235,7 +1194,6 @@ body.login-page .login-form-group label {
 ========================================================= */
 
 body.login-page .login-form-group input {
-
     display: block !important;
 
     width: 100% !important;
@@ -1262,12 +1220,10 @@ body.login-page .login-form-group input {
 }
 
 body.login-page .login-form-group input::placeholder {
-
     color: #7e87a5;
 }
 
 body.login-page .login-form-group input:focus {
-
     border-color: #7c4dff;
 
     box-shadow:
@@ -1280,7 +1236,6 @@ body.login-page .login-form-group input:focus {
 ========================================================= */
 
 body.login-page .login-form-group button[type="button"] {
-
     display: block !important;
 
     width: auto !important;
@@ -1305,7 +1260,6 @@ body.login-page .login-form-group button[type="button"] {
 }
 
 body.login-page .login-form-group button[type="button"]:hover {
-
     color: #c5b4ff;
 
     background: transparent;
@@ -1321,7 +1275,6 @@ body.login-page .login-form-group button[type="button"]:hover {
 ========================================================= */
 
 body.login-page .login-box form > button[type="submit"] {
-
     display: block !important;
 
     width: 100% !important;
@@ -1356,7 +1309,6 @@ body.login-page .login-box form > button[type="submit"] {
 }
 
 body.login-page .login-box form > button[type="submit"]:hover {
-
     transform: translateY(-2px);
 
     box-shadow:
@@ -1369,7 +1321,6 @@ body.login-page .login-box form > button[type="submit"]:hover {
 ========================================================= */
 
 body.login-page .login-box p {
-
     margin: 15px 0 0 0;
 
     text-align: center;
@@ -1380,7 +1331,6 @@ body.login-page .login-box p {
 }
 
 body.login-page .login-box p a {
-
     color: #a98bff;
 
     font-weight: bold;
@@ -1389,7 +1339,6 @@ body.login-page .login-box p a {
 }
 
 body.login-page .login-box p a:hover {
-
     color: #c7b7ff;
 
     text-decoration: underline;
@@ -1401,7 +1350,6 @@ body.login-page .login-box p a:hover {
 ========================================================= */
 
 body.login-page .login-message {
-
     display: block !important;
 
     width: 100% !important;
@@ -1425,7 +1373,6 @@ body.login-page .login-message {
 /* ERROR */
 
 body.login-page .login-message.error {
-
     background: rgba(220, 53, 69, 0.15) !important;
 
     color: #ff8b96 !important;
@@ -1437,7 +1384,6 @@ body.login-page .login-message.error {
 /* SUCCESS */
 
 body.login-page .login-message.success {
-
     background: rgba(40, 167, 69, 0.15) !important;
 
     color: #71df90 !important;
@@ -1451,7 +1397,6 @@ body.login-page .login-message.success {
 ========================================================= */
 
 body.login-page .login-box form .login-form-group:last-of-type {
-
     margin-bottom: 8px;
 }
 
@@ -1467,7 +1412,6 @@ body.login-page .login-box form .login-form-group:last-of-type {
     }
 
     nav a {
-
         display: block;
 
         margin: 5px auto;
@@ -1479,28 +1423,24 @@ body.login-page .login-box form .login-form-group:last-of-type {
     .student-container,
     .form-container,
     .delete-container {
-
         width: 94%;
 
         margin: 25px auto;
     }
 
     .student-header {
-
         flex-direction: column;
 
         gap: 15px;
     }
 
     .search-form {
-
         flex-direction: column;
 
         width: 100%;
     }
 
     .search-form input {
-
         width: 100%;
 
         border-radius: 8px;
@@ -1509,36 +1449,30 @@ body.login-page .login-box form .login-form-group:last-of-type {
     }
 
     .search-form button {
-
         width: auto;
 
         border-radius: 8px;
     }
 
     .table-wrapper {
-
         overflow-x: auto;
     }
 
     .dashboard-cards {
-
         grid-template-columns: 1fr 1fr;
     }
 
     .pagination {
-
         flex-wrap: wrap;
     }
 
     .detail-container {
-
         width: 94%;
 
         padding: 22px;
     }
 
     .student-details strong {
-
         display: block;
 
         width: 100%;
@@ -1555,36 +1489,30 @@ body.login-page .login-box form .login-form-group:last-of-type {
 @media (max-width: 600px) {
 
     .home-container {
-
         min-height: calc(100vh - 60px);
 
         padding: 20px;
     }
 
     .home-content {
-
         padding: 30px 20px;
     }
 
     .home-content h1 {
-
         font-size: 29px;
     }
 
     .home-content p {
-
         font-size: 16px;
     }
 
     .home-buttons {
-
         flex-direction: column;
 
         align-items: center;
     }
 
     .home-button {
-
         width: 220px;
     }
 }
@@ -1597,12 +1525,10 @@ body.login-page .login-box form .login-form-group:last-of-type {
 @media (max-width: 480px) {
 
     body.login-page {
-
         padding: 15px;
     }
 
     body.login-page .login-box {
-
         width: 100% !important;
 
         max-width: 360px !important;
@@ -1613,29 +1539,24 @@ body.login-page .login-box form .login-form-group:last-of-type {
     }
 
     body.login-page .login-box h1 {
-
         font-size: 22px;
     }
 
     body.login-page .login-box h2 {
-
         font-size: 18px;
 
         margin-bottom: 18px;
     }
 
     body.login-page .login-form-group {
-
         margin-bottom: 14px;
     }
 
     body.login-page .login-box form > button[type="submit"] {
-
         height: 42px;
     }
 
     .dashboard-cards {
-
         grid-template-columns: 1fr;
     }
 }
@@ -1649,19 +1570,16 @@ body.login-page .login-box form .login-form-group:last-of-type {
 
     .student-container th,
     .student-container td {
-
         padding: 10px 7px;
 
         font-size: 13px;
     }
 
     .form-container {
-
         padding: 22px 16px;
     }
 
     .delete-container {
-
         padding: 25px 18px;
     }
 }
