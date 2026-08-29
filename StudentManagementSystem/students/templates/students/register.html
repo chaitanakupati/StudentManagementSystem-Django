@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Student Management System</title>
+
+    <link rel="stylesheet"
+          href="{% static 'students/style.css' %}">
+
+</head>
+
+<body class="login-page">
+
+    <div class="login-box">
+
+        <h1>Student Management System</h1>
+
+        <h2>Register</h2>
+
+
+        {% if messages %}
+
+            {% for message in messages %}
+
+                <div class="login-message {{ message.tags }}">
+                    {{ message }}
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+
+            <!-- Username -->
+
+            <div class="login-form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Password -->
+
+            <div class="login-form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Confirm Password -->
+
+            <div class="login-form-group">
+
+                <label for="confirm_password">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                    placeholder="Confirm password"
+                    required
+                >
+
+            </div>
+
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+
+        <p>
+            Already have an account?
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

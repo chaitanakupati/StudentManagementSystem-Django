@@ -1,0 +1,184 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Student Management System</title>
+
+    <link rel="stylesheet"
+          href="{% static 'students/style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+
+        {% if user.is_authenticated %}
+
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+
+            <a href="{% url 'student_list' %}">
+                Student List
+            </a>
+
+            <a href="{% url 'add_student' %}">
+                Add Student
+            </a>
+
+            <a href="{% url 'logout' %}">
+                Logout
+            </a>
+
+        {% else %}
+
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+
+        {% endif %}
+    </nav>
+
+
+    <!-- Dashboard -->
+    <div class="student-container">
+
+        <h1>Student Management System</h1>
+
+        <h2>Dashboard</h2>
+
+
+        <!-- Summary Cards -->
+        <div class="dashboard-cards">
+
+            <!-- Total Students -->
+            <div class="dashboard-card">
+
+                <h3>Total Students</h3>
+
+                <p>
+                    {{ total_students }}
+                </p>
+
+                <span>Students</span>
+
+            </div>
+
+
+            <!-- Total Courses -->
+            <div class="dashboard-card">
+
+                <h3>Total Courses</h3>
+
+                <p>
+                    {{ total_courses }}
+                </p>
+
+                <span>Courses</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Students by Course -->
+        <h2 class="course-title">
+            Students by Course
+        </h2>
+
+
+        <div class="dashboard-cards">
+
+            {% for course in course_counts %}
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        {{ course.course }}
+                    </h3>
+
+                    <p>
+                        {{ course.total }}
+                    </p>
+
+                    <span>
+                        Students
+                    </span>
+
+                </div>
+
+            {% empty %}
+
+                <div class="no-course">
+                    No students registered yet.
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- Students by Department -->
+        <h2 class="course-title">
+            Students by Department
+        </h2>
+
+
+        <div class="dashboard-cards">
+
+            {% for department in department_counts %}
+
+                <div class="dashboard-card">
+
+                    <h3>
+                        {{ department.department }}
+                    </h3>
+
+                    <p>
+                        {{ department.total }}
+                    </p>
+
+                    <span>
+                        Students
+                    </span>
+
+                </div>
+
+            {% empty %}
+
+                <div class="no-course">
+                    No department information available.
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- Quick Actions -->
+        <div class="dashboard-actions">
+
+            <a href="{% url 'add_student' %}">
+                + Add Student
+            </a>
+
+            <a href="{% url 'student_list' %}">
+                View Students
+            </a>
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>

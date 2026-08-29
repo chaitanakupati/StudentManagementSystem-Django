@@ -1,0 +1,98 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Delete Student</title>
+
+    <link rel="stylesheet"
+          href="{% static 'students/style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+
+        {% if user.is_authenticated %}
+
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+
+            <a href="{% url 'student_list' %}">
+                Student List
+            </a>
+
+            <a href="{% url 'add_student' %}">
+                Add Student
+            </a>
+
+            <a href="{% url 'logout' %}">
+                Logout
+            </a>
+
+        {% else %}
+
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+
+        {% endif %}
+    </nav>
+
+
+    <!-- Delete Confirmation -->
+
+    <div class="delete-container">
+
+        <h1>Delete Student</h1>
+
+        <h2>Are you sure?</h2>
+
+        <p>
+            You are about to delete:
+        </p>
+
+        <p>
+            <strong>{{ student.name }}</strong>
+        </p>
+
+        <p>
+            Email: {{ student.email }}
+        </p>
+
+        <p>
+            Phone: {{ student.phone }}
+        </p>
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <button type="submit" class="delete-button">
+                Yes, Delete
+            </button>
+            
+            <a href="{% url 'student_list' %}" class="cancel-button">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+
