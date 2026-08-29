@@ -1,0 +1,219 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student - Student Management System</title>
+
+    <link rel="stylesheet" href="{% static 'students/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+
+        {% if user.is_authenticated %}
+
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+
+            <a href="{% url 'student_list' %}">
+                Student List
+            </a>
+
+            <a href="{% url 'add_student' %}">
+                Add Student
+            </a>
+
+            <a href="{% url 'logout' %}">
+                Logout
+            </a>
+
+        {% else %}
+
+            <a href="{% url 'login' %}">
+                Login
+            </a>
+
+        {% endif %}
+    </nav>
+
+
+    <!-- Add Student Form -->
+    <div class="form-container">
+
+        <h1>Student Management System</h1>
+
+        <h2>Add Student</h2>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message {{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+
+            <!-- Name -->
+            <div class="form-group">
+
+                <label for="name">Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter student name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter email address"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Phone -->
+            <div class="form-group">
+
+                <label for="phone">Phone</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter phone number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+
+                <label for="date_of_birth">Date of Birth</label>
+
+                <input
+                    type="date"
+                    id="date_of_birth"
+                    name="date_of_birth"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Gender -->
+            <div class="form-group">
+
+                <label for="gender">Gender</label>
+
+                <select id="gender" name="gender" required>
+
+                    <option value="">Select Gender</option>
+
+                    <option value="Male">Male</option>
+
+                    <option value="Female">Female</option>
+
+                    <option value="Other">Other</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Address -->
+            <div class="form-group">
+
+                <label for="address">Address</label>
+
+                <textarea
+                    id="address"
+                    name="address"
+                    rows="4"
+                    placeholder="Enter address"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- Course -->
+            <div class="form-group">
+
+                <label for="course">Course</label>
+            
+                <select id="course" name="course" required>
+            
+                    <option value="">Select Course</option>
+            
+                    <option value="MCA">MCA</option>
+                    <option value="MBA">MBA</option>
+                    <option value="MCom">MCom</option>
+                    <option value="MSC">MSC</option>
+                    <option value="BSC">BSC</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BBA">BBA</option>
+                    <option value="BCom">BCom</option>
+                    <option value="Other">Other</option>
+            
+                </select>
+            
+            </div>
+
+
+            <!-- Department -->
+            <div class="form-group">
+
+                <label for="department">Department</label>
+            
+                <select id="department" name="department" required>
+            
+                    <option value="">Select Department</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Computer Applications">Computer Applications</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Management">Management</option>
+                    <option value="Other">Other</option>
+            
+                </select>
+            
+            </div>
+
+
+            <!-- Submit -->
+            <button type="submit">
+                Add Student
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
